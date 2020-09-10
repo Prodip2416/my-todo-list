@@ -2,7 +2,7 @@ import React from 'react';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
-import Button from '@material-ui/core/Button';
+import DeleteIcon from '@material-ui/icons/Delete'; 
 
 
 const TodoList = ({ todo, removeTodo }) => {
@@ -10,7 +10,7 @@ const TodoList = ({ todo, removeTodo }) => {
         <React.Fragment>
             <ListItem button>
                 <ListItemText primary={todo.name} />
-                <Button color="secondary" onClick={() => removeTodo(todo.id)} > Delete</Button>
+                <DeleteIcon color="secondary" onClick={() => removeTodo(todo.id)}/>
             </ListItem>
             <Divider />
         </React.Fragment>
